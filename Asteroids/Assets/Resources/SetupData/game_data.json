@@ -1,0 +1,59 @@
+{
+  "QuestionTypes": [
+    {
+      "QuestionData": {
+        "question": "Uno de estos asteroides pasa de una velocidad media de 40 m sobre segundo a 70 m/s en 3 segundos. ¿Que aceleración tiene?",
+        "solution": 10
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "La nave al iniciar el juego parte del reposo y alcanza una velocidad deseen 32 km/h en 20 segundos. ¿Calcula su aceleración?",
+        "solution": 1
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "Una Bala parte del reposo y alcanza una velocidad de 72 km/h en 20 segundos. ¿Hallar el espacio recorrido en ese tiempo?",
+        "solution": 200
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "Supongamos que este juego ocurre en la tierra. Si la nave espacial se encuentra a 20 m del suelo, esta se encuentra apagada y su velocidad inicial es 0. Cuanto tiempo tarda en llegar al suelo?.",
+        "solution": 0.6
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "¿Si la nave recorre 100 m en 10 segundos, cuál es su rapidez media?",
+        "solution": 10
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "Calculo el tiempo que demora la nave en recorrer 800 m, si su rapidez media es de 20 m/s",
+        "solution": 40
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "Un disparo con movimiento rectilíneo uniforme tiene una rapidez de 4 m/s. Calcular la distancia que recorre la bala en 6 segundos? (respuesta en minutos)",
+        "solution": 24
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "Un asteroide que  llevaba una rapidez de 4 m/s acelera durante 6 segundos y adquiere una rapidez de 22 m/s. Calcular la aceleración media?",
+        "solution": 3
+      }
+    },
+    {
+      "QuestionData": {
+        "question": "La nave en un instante dado se mueve con una aceleración de 5 m/s al cuadrado. Al cabo de 6 segundos alcanza una rapidez de 40 m/s. Calcular la rapidez inicial  de ese instante dado?",
+        "solution": 10
+      }
+    }
+
+  ]
+}
