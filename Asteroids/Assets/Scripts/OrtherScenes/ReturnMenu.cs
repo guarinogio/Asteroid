@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ReturnMenu : MonoBehaviour {
 
 	public void ReturnToMenu () {
-		Application.LoadLevel("MenuScene");
+        SceneManager.LoadScene("MenuScene");
 	}
 }

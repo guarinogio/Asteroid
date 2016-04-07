@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LiveBehaviour : MonoBehaviour {
 
@@ -43,7 +44,7 @@ public class LiveBehaviour : MonoBehaviour {
 			Instantiate(ship);
 			break;
 		case 0:
-			Application.LoadLevel("GameOverScene");
+                SceneManager.LoadScene("GameOverScene");
 			break;
 		}
 

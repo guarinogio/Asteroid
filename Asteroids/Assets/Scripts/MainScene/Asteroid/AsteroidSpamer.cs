@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
+using UnityEngine.SceneManagement;
 
 public class AsteroidSpamer : MonoBehaviour {
 
@@ -56,6 +58,10 @@ public class AsteroidSpamer : MonoBehaviour {
     [SerializeField]
     private float timerInSeconds = 30;
 
+
+    public GameObject check;
+    public GameObject x;
+
     // Use this for initialization
     void Start () {
 
@@ -95,7 +101,7 @@ public class AsteroidSpamer : MonoBehaviour {
     void FixedUpdate() {
 
 		if(points >= 50){
-            Application.LoadLevel("WinScene");
+            SceneManager.LoadScene("WinScene");
         }
 
         if (pointCount >= (points * level))
@@ -141,39 +147,62 @@ public class AsteroidSpamer : MonoBehaviour {
 
     public void Reactivar()
     {
+        bool valor;
         continuar = true;
         StopCoroutine(SetTimer());
         if (preguntas.solution.ToString() == GameObject.Find("InputField/Text").gameObject.GetComponent<Text>().text)
         {
+            valor = true;
             pointCount++;
         }
         else
         {
+            valor = false;
             NotificationCenter.DefaultCenter().PostNotification(this, "DestroyShip");
             NotificationCenter.DefaultCenter().PostNotification(this,"RemoveLive");
         }
 
         Time.timeScale = 1f;
+        StartCoroutine(SetTimer(2f, valor));
         caja_preguntas.gameObject.SetActive(false);
     }
 
-	void SpamAsteroid(int quantity){
+    private IEnumerator SetTimer(float v1, bool v2)
+    {
+        if (v2)
+        {
+            check.SetActive(true);
+        }
+        else
+        {
+            x.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(v1);
+ 
+        x.SetActive(false);
+        check.SetActive(false);
+
+        yield return null;
+    }
+
+    void SpamAsteroid(int quantity){
 		for (int i = 0; i < quantity; i++) {
-			spamDirection = Random.Range(left, right);
+			spamDirection = UnityEngine.Random.Range(left, right);
 			
 			
 			if(spamDirection == left){
-				asteroidDirection.x = Random.Range(-1f, 0f);
+				asteroidDirection.x = UnityEngine.Random.Range(-1f, 0f);
 				spamPosition.x = -1*camCoordinates.x;
 			}else{
-				asteroidDirection.x = Random.Range(0f, 1f);
+				asteroidDirection.x = UnityEngine.Random.Range(0f, 1f);
 				spamPosition.x = camCoordinates.x;
 			}
 			
-			spamPosition.y = Random.Range(-1*camCoordinates.y, camCoordinates.y);
+			spamPosition.y = UnityEngine.Random.Range(-1*camCoordinates.y, camCoordinates.y);
 			spamPosition.z = -1f;
 			
-			asteroidDirection.y = Random.Range(-0.8f, 0.8f);
+			asteroidDirection.y = UnityEngine.Random.Range(-0.8f, 0.8f);
 			asteroidDirection.z = 0f;
 			
 			asteroidInstance = Instantiate(asteroid);

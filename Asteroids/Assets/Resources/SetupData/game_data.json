@@ -32,7 +32,7 @@
     },
     {
       "QuestionData": {
-        "question": "Calculo el tiempo que demora la nave en recorrer 800 m, si su rapidez media es de 20 m/s",
+        "question": "Calcule el tiempo que demora la nave en recorrer 800 m, si su rapidez media es de 20 m/s",
         "solution": 40
       }
     },

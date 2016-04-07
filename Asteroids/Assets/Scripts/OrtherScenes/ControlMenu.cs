@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ControlMenu : MonoBehaviour {
 
 	public void ControlsMenu () {
-		Application.LoadLevel("ControlScene");
+        SceneManager.LoadScene("ControlScene");
 	}
 }
